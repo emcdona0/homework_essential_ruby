@@ -18,13 +18,35 @@ def pmt(rate, nper, pv)
   # Your code to implement the method goes here.
   # You shouldn't have to write or change code anywhere else.
   # =========================================================
+
+r=0
+r = rate + 1
+
+temp = r**nper
+temp_2 = pv * rate
+temp_3 = temp - 1
+
+numerator = temp * temp_2
+denominator = temp_3
+return numerator / denominator
+
 end
+
 
 # Example usage of the method is below. Uncomment to test your pmt method,
 #   and once you have successfully defined it, re-comment them (before
 #   starting challenge_2.rb).
 
-# the_payment = pmt(0.0404/12, 60, 30000)
-# puts "Your monthly payment will be $#{the_payment.round(2)}."
+the_payment = pmt(0.0404/12, 60, 30000)
+puts "Your monthly payment will be $#{the_payment.round(2)}."
+
+#puts r
+#puts nper
+#puts temp
+#puts temp_2
+#Puts temp_3
+#puts numerator
+#puts denominator
+
 
 # You should get $553.04.

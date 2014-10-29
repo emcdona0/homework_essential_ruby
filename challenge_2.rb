@@ -34,6 +34,18 @@ principal_amount = 200000.0
 # Your code goes here.
 # You shouldn't have to write code or change code anywhere else.
 
+
+ bank_counter = 0
+  loan_quotes.each do []
+
+ monthly_payment =  pmt(loan_quotes[bank_counter]["annual_rate"], number_of_monthly_payments, principal_amount)
+
+  puts "The monthly payment from #{loan_quotes[bank_counter]["bank"]} will be #{monthly_payment.round(2)}."
+  bank_counter = bank_counter + 1
+
+  end
+
+
 # loan_quotes.each ...
 
 # ==============================================================

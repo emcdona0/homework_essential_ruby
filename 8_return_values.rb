@@ -68,12 +68,14 @@ def variance(list_of_numbers)
   difference_squared = 0
   temp = mean(list_of_numbers)
 
+  list_of_differences = []
   list_of_numbers.each do |number|
-    temp - number = difference
+    difference = temp - number
     difference_squared = difference * difference
+    list_of_differences.push(difference_squared)
   end
 
-    return sum(difference_squared) / list_of_numbers.count
+    return sum(list_of_differences) / list_of_differences.count
 
   # ====================
 end
